@@ -9,6 +9,7 @@
   <body>
     <header>
       <nav>
+        <a href="#inicio">Inicio</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#skills">Skills</a>
@@ -18,16 +19,110 @@
     </header>
 
     <main>
+      <!-- Inicio -->
       <section id="inicio">
         <h1 id="titulo-inicio">Portfolio</h1>
       </section>
 
+      <!-- Sobre mí -->
       <section id="sobre-mi">
-        <h2 id="titulo-sobre-mi">Sobre mí</h2>
+        <div class="card-sobre-mi">
+          <div class="card-imagen">
+            <img
+              src="images/avatar-pacha.png"
+              alt="Ilustración de Loco Pacha"
+            />
+          </div>
+          <div class="card-texto">
+            <h2>LOCO PACHA</h2>
+            <p class="rol">Diseñador de Producto Digital</p>
+            <p>
+              Soy un diseñador de productos digitales con base de diseño
+              industrial y gráfico. Me gusta transformar ideas en soluciones
+              efectivas que hacen la vida más fácil y divertida para los
+              usuarios.
+            </p>
+          </div>
+        </div>
       </section>
 
+      <!-- Proyectos -->
       <section id="proyectos">
-        <h2 id="titulo-proyectos">Proyectos</h2>
+        <h2>Proyectos</h2>
+        <div class="proyectos-list">
+          <!-- 1. CLUB CICLISTA VELOCIDAD -->
+          <article class="proyecto">
+            <div class="proyecto-img">
+              <img
+                src="images/velodromo.png"
+                alt="Logo del Club Ciclista Velocidad"
+              />
+            </div>
+            <div class="proyecto-texto">
+              <h3>CLUB CICLISTA VELOCIDAD</h3>
+              <p>
+                Identidad visual para el único velódromo de la Ciudad de
+                Córdoba.
+              </p>
+              <button type="button" class="btn-ver">VER MÁS</button>
+            </div>
+          </article>
+
+          <!-- 2. DEFIANT WALLET -->
+          <article class="proyecto">
+            <div class="proyecto-img">
+              <img
+                src="images/defiant-wallet.png"
+                alt="Isotipo de Defiant Wallet"
+              />
+            </div>
+            <div class="proyecto-texto">
+              <h3>DEFIANT WALLET</h3>
+              <p>
+                UX/UI en flujos transaccionales para wallet self custodial EVM.
+              </p>
+              <button type="button" class="btn-ver">VER MÁS</button>
+            </div>
+          </article>
+
+          <!-- 3. BUENBIT -->
+          <article class="proyecto">
+            <div class="proyecto-img">
+              <img src="images/buenbit.png" alt="Logo de Buenbit" />
+            </div>
+            <div class="proyecto-texto">
+              <h3>BUENBIT</h3>
+              <p>
+                UX/UI en vertical de growth para app de inversiones personales.
+              </p>
+              <button type="button" class="btn-ver">VER MÁS</button>
+            </div>
+          </article>
+
+          <!-- 4. ETH KIPU -->
+          <article class="proyecto">
+            <div class="proyecto-img">
+              <img src="images/eth-kipu.png" alt="Logo de ETH Kipu" />
+            </div>
+            <div class="proyecto-texto">
+              <h3>ETH KIPU</h3>
+              <p>Identidad visual y product design para fundación educativa.</p>
+              <button type="button" class="btn-ver">VER MÁS</button>
+            </div>
+          </article>
+
+          <!-- 5. ETH LATAM -->
+          <article class="proyecto">
+            <div class="proyecto-img">
+              <img src="images/eth-latam.png" alt="Símbolo de ETH Latam" />
+            </div>
+            <div class="proyecto-texto">
+              <h3>ETH LATAM</h3>
+              <p>Identidad visual y UI design para conferencia de Ethereum.</p>
+              <button type="button" class="btn-ver">VER MÁS</button>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section id="skills">
@@ -43,6 +138,7 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer>
       <small>© 2025 Loco Pacha. Todos los derechos reservados.</small>
     </footer>
