@@ -11,16 +11,30 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <!-- NAVBAR -->
-      <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#skills">Skills</a>
-        <a href="#testimonios">Testimonios</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+    <!-- NAVBAR -->
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a href="#inicio" class="brand">
+          <img src="img/logo.png" alt="Loco Pacha" />
+        </a>
+
+        <button class="burger">
+          <svg class="icon-burger" viewBox="0 0 24 24" width="32" height="32">
+            <line x1="3" y1="6" x2="21" y2="6" class="line l1" />
+            <line x1="3" y1="12" x2="21" y2="12" class="line l2" />
+            <line x1="3" y1="18" x2="21" y2="18" class="line l3" />
+          </svg>
+        </button>
+
+        <nav class="menu">
+          <a href="#inicio">Inicio</a>
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#skills">Skills</a>
+          <a href="#testimonios">Testimonios</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -29,7 +43,7 @@
         <h1 id="titulo-inicio">Portfolio</h1>
       </section>
 
-      <!-- Sobre mí -->
+      <!-- SOBRE MI -->
       <section id="sobre-mi">
         <div class="card-sobre-mi">
           <div class="card-imagen">
@@ -51,7 +65,7 @@
         </div>
       </section>
 
-      <!-- Proyectos -->
+      <!-- PROYECTOS -->
       <section id="proyectos">
         <h2>Proyectos</h2>
         <div class="proyectos-list">
@@ -133,7 +147,7 @@
         </div>
       </section>
 
-      <!-- Skills -->
+      <!-- SKILLS -->
       <section id="skills">
         <h2>MIS SKILLS</h2>
 
@@ -159,7 +173,7 @@
         </div>
       </section>
 
-      <!-- Testimonios -->
+      <!-- TESTIMONIOS -->
       <section id="testimonios">
         <h2>TESTIMONIOS</h2>
 
@@ -251,5 +265,7 @@
     <footer>
       <small>© 2025 Loco Pacha. Todos los derechos reservados.</small>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

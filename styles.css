@@ -5,26 +5,152 @@
 }
 
 html {
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Handjet', sans-serif
-    line-height: 1.5;
+    font-family: 'Handjet', sans-serif;
+    line-height: 1.2;
     background-color: #161616;
     color: #fff;
+    padding: 1rem;
 }
 
-h1,
-h2,
-h3 {
-    font-family: 'Handjet', sans-serif;
+body {
+    color: #FFFEFF;
     font-weight: 500;
-    
+}
+
+h2 {
+    color: #FF94C8;
+    font-weight: 800;
+}
+
+h3 {
+    color: #8E79BD;
+    font-weight: 600;
 }
 
 p {
-    font-family: 'Handjet', sans-serif;
-    font-weight: 200;
-   
+    color: #FFFEFF;
+    font-weight: 300;
+}
+
+
+/* --- HEADER GENERAL --- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #161616;
+}
+
+/* --- CONTENEDOR INTERNO --- */
+.nav-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* --- LOGO --- */
+.brand img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+/* --- MENÚ MÓVIL --- */
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 72vw;
+    max-width: 320px;
+    background: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 88px 24px 24px 24px;
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    box-shadow: -12px 0 24px rgba(0, 0, 0, .35);
+}
+
+/* --- LINKS DEL MENÚ --- */
+.menu a {
+    color: #FFFEFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.menu a:hover {
+    color: #8B7AB8;
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+/* --- BOTÓN HAMBURGUESA --- */
+.burger {
+    display: inline-flex;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+    outline: none;
+}
+
+/* --- LÍNEAS DEL SVG --- */
+.icon-burger .line {
+    stroke: #FFFEFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: transform .25s ease, opacity .2s;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+/* --- ANIMACIÓN A X --- */
+.burger.open .l1 {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.burger.open .l2 {
+    opacity: 0;
+}
+
+.burger.open .l3 {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* --- VISTA DESKTOP --- */
+@media (min-width:768px) {
+    .burger {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        transform: none;
+        height: auto;
+        width: auto;
+        max-width: none;
+        background: transparent;
+        box-shadow: none;
+        flex-direction: row;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .menu a {
+        font-size: 1rem;
+    }
 }
