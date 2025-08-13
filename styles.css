@@ -1,3 +1,4 @@
+/* -------------- General ------------------ */
 * {
     margin: 0;
     padding: 0;
@@ -188,8 +189,8 @@ p {
 
 /* --- MEDIA (IMAGEN) --- */
 .hero-media {
-    border: 4px solid var(--cyan);
-    border-radius: 18px;
+    border: 2px solid var(--cyan);
+    border-radius: 16px;
     overflow: hidden;
     background: #0f0f0f;
 }
@@ -210,26 +211,26 @@ p {
 
 .hero-content h2 {
     color: var(--pink);
-    font-weight: 700;
+    font-weight: 600;
     font-size: clamp(1.8rem, 1.2rem + 4vw, 3rem);
     line-height: 1.05;
 }
 
 .hero-content h3 {
     color: var(--violet);
-    font-weight: 600;
+    font-weight: 400;
     font-size: clamp(1.2rem, 1rem + 2vw, 2rem);
 }
 
 .hero-content p {
     color: var(--text);
-    font-weight: 500;
-    font-size: clamp(.95rem, .9rem + .4vw, 1.125rem);
+    font-weight: 200;
+    font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
     line-height: 1.5;
     margin-top: 8px;
 }
 
-/* --- DESKTOP (DOS COLUMNAS) --- */
+/* --- DESKTOP --- */
 @media (min-width: 900px) {
     .hero-card {
         grid-template-columns: auto 1fr;
@@ -246,6 +247,85 @@ p {
     .hero-media {
         height: 100%;
         max-height: fit-content;
+        font-size: 1.2rem;
     }
 }
+
+/* -------------- PROYECTOS ------------------ */
+.proyectos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    justify-content: center;
+}
+
+/* CARD */
+.proyecto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.proyecto-img {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.proyecto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.proyecto-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.proyecto-texto h3 {
+    font-size: 1.5rem;
+    color: #F49FE3;
+    margin: 0;
+}
+
+.proyecto-texto p {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.4;
+}
+
+.btn-ver {
+    align-self: start;
+    padding: .6rem 1.2rem;
+    border-radius: 999px;
+    background: #8E79CC;
+    color: #fff;
+    border: none;
+    font: 700 1rem/1 'Handjet', sans-serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: filter .2s ease;
+}
+
+.btn-ver:hover {
+    filter: brightness(1.08);
+}
+
+@media (max-width: 768px) {
+    .proyecto {
+        grid-template-columns: 104px 1fr;
+       
+    }
+
+    .proyecto-img {
+        aspect-ratio: 1/1;
+        min-height: 88px;
+    
+    }
 }
