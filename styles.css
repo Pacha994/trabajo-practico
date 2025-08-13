@@ -436,7 +436,6 @@ p {
 /* --------------  falta solucionar el layout en mobile ------------------ */
 
 /* ===== CONTACTO ===== */
-/* ===== CONTACTO (mobile first) ===== */
 #contacto {
     padding: 20px 16px;
 }
@@ -472,7 +471,6 @@ p {
     padding: 16px 20px;
     border-radius: 14px;
     background: #A78BFA;
-    /* lavanda */
     color: #fff;
     text-decoration: none;
     margin-bottom: 12px;
@@ -483,10 +481,8 @@ p {
     font-size: 18px;
     line-height: 1.2;
     color: #FAF7F5;
-    /* blanco cálido */
 }
 
-/* ===== Desktop: mismo layout, 1.5x ===== */
 @media (min-width: 1024px) {
     #contacto {
         padding: 30px 24px;
@@ -498,27 +494,22 @@ p {
 
     #contacto .contact-img img {
         width: 144px;
-        /* 96 × 1.5 */
         height: 144px;
-        /* 96 × 1.5 */
         border-radius: 18px;
-        /* 12 × 1.5 */
+
     }
 
     #contacto .cta {
         font-size: 27px;
-        /* 18 × 1.5 */
         padding: 24px 30px;
-        /* 16/20 × 1.5 */
         border-radius: 21px;
-        /* 14 × 1.5 */
         margin-bottom: 18px;
-        /* 12 × 1.5 */
     }
 
     #contacto .contact-content p {
         font-size: 27px;
-        /* 18 × 1.5 */
         line-height: 1.2;
     }
 }
+
+/* --------------  falta solucionar el layout en mobile ------------------ */
