@@ -259,7 +259,6 @@ p {
     justify-content: center;
 }
 
-/* CARD */
 .proyecto {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -278,7 +277,6 @@ p {
     height: 100%;
     object-fit: cover;
 }
-
 
 .proyecto-texto {
     display: flex;
@@ -327,5 +325,41 @@ p {
         aspect-ratio: 1/1;
         min-height: 88px;
     
+    }
+}
+
+/* -------------- SKILLS ------------------ */
+#skills {
+    padding: auto;
+}
+
+#skills h2 {
+    color: #f291e1;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill-item img {
+    width: 80px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(6, 1fr);
+       
+
+    .skill-item img {
+        width: 100px;
     }
 }
