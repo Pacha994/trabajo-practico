@@ -366,34 +366,26 @@ p {
 
 /* -------------- TESTIMONIOS ------------------ */
 
-/* --- TESTIMONIOS --- */
-/* ====== TESTIMONIOS ====== */
 #testimonios {
     padding: 40px 0;
 }
 
-/* Lista: mobile = 1 columna (stack de cards) */
 .testimonios-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 28px;
-    /* separación entre cards */
 }
 
-/* ---- Card ----  (img izq + texto der en TODOS los tamaños) */
 .testimonio {
     display: flex;
     flex-direction: row;
-    /* asegura layout horizontal */
     align-items: flex-start;
     gap: 16px;
     width: 100%;
 }
 
-/* Imagen cuadrada con esquinas redondeadas */
 .testimonio-img {
     flex: 0 0 88px;
-    /* ancho fijo de la columna de imagen */
 }
 
 .testimonio-img img {
@@ -401,15 +393,12 @@ p {
     height: 88px;
     object-fit: cover;
     border-radius: 16px;
-    /* ajustá al radio de tu sistema */
     display: block;
 }
 
-/* Columna de texto */
 .testimonio-texto {
     flex: 1 1 auto;
     min-width: 0;
-    /* evita que el texto empuje y salte abajo */
 }
 
 .testimonio-texto h3 {
@@ -442,5 +431,94 @@ p {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         column-gap: 56px;
         row-gap: 36px;
+    }
+}
+/* --------------  falta solucionar el layout en mobile ------------------ */
+
+/* ===== CONTACTO ===== */
+/* ===== CONTACTO (mobile first) ===== */
+#contacto {
+    padding: 20px 16px;
+}
+
+#contacto .contact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+#contacto .contact-img img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+#contacto .contact-content {
+    flex: 1;
+}
+
+#contacto .cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1;
+    padding: 16px 20px;
+    border-radius: 14px;
+    background: #A78BFA;
+    /* lavanda */
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+#contacto .contact-content p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #FAF7F5;
+    /* blanco cálido */
+}
+
+/* ===== Desktop: mismo layout, 1.5x ===== */
+@media (min-width: 1024px) {
+    #contacto {
+        padding: 30px 24px;
+    }
+
+    #contacto .contact-card {
+        gap: 24px;
+    }
+
+    #contacto .contact-img img {
+        width: 144px;
+        /* 96 × 1.5 */
+        height: 144px;
+        /* 96 × 1.5 */
+        border-radius: 18px;
+        /* 12 × 1.5 */
+    }
+
+    #contacto .cta {
+        font-size: 27px;
+        /* 18 × 1.5 */
+        padding: 24px 30px;
+        /* 16/20 × 1.5 */
+        border-radius: 21px;
+        /* 14 × 1.5 */
+        margin-bottom: 18px;
+        /* 12 × 1.5 */
+    }
+
+    #contacto .contact-content p {
+        font-size: 27px;
+        /* 18 × 1.5 */
+        line-height: 1.2;
     }
 }
